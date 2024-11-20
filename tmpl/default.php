@@ -18,7 +18,7 @@ use Joomla\CMS\Factory;
 //$list - массив всех контактов.
 if (!$list) return;
 
-if ((int) $params->get('styles') !== 1) {
+if ((int) $params->get('styles') === 1) {
     $app  = Factory::getApplication();
     $doc  = $app->getDocument();
     $doc->getWebAssetManager()->useStyle('mod_contacts_list.contacts-list');

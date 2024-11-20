@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>mediafoks@google.com</authorEmail>
     <authorUrl>https://github.com/mediafoks</authorUrl>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <description>MOD_CONTACTS_LIST_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Module\ContactsList</namespace>
     <files>
@@ -60,7 +60,7 @@
                     <option value="0">JNO</option>
                 </field>
 
-                <field name="styles" type="radio" default="0" label="MOD_CONTACTS_LIST_FIELD_STYLE_LABEL" class="btn-group btn-group-yesno">
+                <field name="styles" type="radio" default="1" label="MOD_CONTACTS_LIST_FIELD_STYLE_LABEL" class="btn-group btn-group-yesno">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>

@@ -21,7 +21,7 @@ use Joomla\Utilities\ArrayHelper;
 /**
  * Helper for mod_contacts_list
  *
- * @since  1.1.0
+ * @since  1.1.1
  */
 class ContactsListHelper implements DatabaseAwareInterface
 {
