@@ -44,18 +44,24 @@ if ((int) $params->get('styles') === 1) {
                             ]
                         ); ?>
                     </div>
-                    <div class="contact-mod__body">
-                        <h4 class="contact-mod__name"><?= $contact->name; ?></h4>
-                        <div class="contact-mod__info">
-                            <span class="contact-mod__position"><?= $contact->con_position; ?></span>
-                        </div>
-                    </div>
-                <?php else: ?>
+                <?php endif; ?>
+                <div class="contact-mod__body">
                     <h4 class="contact-mod__name"><?= $contact->name; ?></h4>
                     <div class="contact-mod__info">
-                        <span class="contact-mod__position"><?= $contact->con_position; ?></span>
+                        <?php if ((int) $params->get('show_position') === 1): ?>
+                            <span class="contact-mod__position"><?= $contact->con_position; ?></span>
+                        <?php endif; ?>
+                        <?php if ((int) $params->get('show_email') === 1): ?>
+                            <span class="contact-mod__email"><?= $contact->email_to; ?></span>
+                        <?php endif; ?>
+                        <?php if ((int) $params->get('show_phone') === 1): ?>
+                            <span class="contact-mod__phone"><?= $contact->telephone; ?></span>
+                        <?php endif; ?>
+                        <?php if ((int) $params->get('show_mobile') === 1): ?>
+                            <span class="contact-mod__mobile"><?= $contact->mobile; ?></span>
+                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
+                </div>
             </a>
         </li>
     <?php endforeach; ?>
