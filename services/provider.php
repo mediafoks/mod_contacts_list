@@ -20,7 +20,7 @@ use Joomla\CMS\WebAsset\WebAssetRegistry;
 /**
  * The Ks contacts birthday module service provider.
  *
- * @since  1.2.0
+ * @since  1.2.1
  */
 return new class() implements ServiceProviderInterface
 {
@@ -31,7 +31,7 @@ return new class() implements ServiceProviderInterface
      *
      * @return  void
      *
-     * @since   1.2.0
+     * @since   1.2.1
      */
     public function register(Container $container)
     {

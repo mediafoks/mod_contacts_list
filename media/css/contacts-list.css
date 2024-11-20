@@ -16,6 +16,7 @@
   --contact-mod-img-size: 82px;
   --contact-mod-title-font-size: 1rem;
   --contact-mod-title-font-weight: 500;
+  --contact-mod-info-gap: .25rem;
   --contact-mod-info-color: hsl(210 7% 58%);
   --contact-mod-info-font-size: 0.889rem;
   margin-block-end: var(--contact-mod-margin-block-end);
@@ -57,6 +58,9 @@
   font-weight: var(--contact-mod-title-font-weight);
 }
 .contact-mod__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-mod-info-gap);
   color: var(--contact-mod-info-color);
   font-size: var(--contact-mod-info-font-size);
   line-height: 1.2;

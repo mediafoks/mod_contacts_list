@@ -43,6 +43,9 @@
     }
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--contact-mod-info-gap);
         color: var(--contact-mod-info-color);
         font-size: var(--contact-mod-info-font-size);
         line-height: 1.2;
