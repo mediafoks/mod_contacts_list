@@ -22,7 +22,7 @@ use Joomla\CMS\Helper\ModuleHelper;
 /**
  * Dispatcher class for mod_contacts_list
  *
- * @since  1.0.2
+ * @since  1.1.0
  */
 class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareInterface
 {
@@ -33,7 +33,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
      *
      * @return  array
      *
-     * @since   1.0.2
+     * @since   1.1.0
      */
 
     protected function getLayoutData()

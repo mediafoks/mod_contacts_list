@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>mediafoks@google.com</authorEmail>
     <authorUrl>https://github.com/mediafoks</authorUrl>
-    <version>1.0.2</version>
+    <version>1.1.0</version>
     <description>MOD_CONTACTS_LIST_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Module\ContactsList</namespace>
     <files>
@@ -53,9 +53,14 @@
                     <option value="RAND()">JGLOBAL_RANDOM_ORDER</option>
                 </field>
 
-                <field name="contact_options" type="note" label="MOD_CONTACTS_LIST_CONTACT_OPTIONS" />
+                <field name="contact_options" type="note" label="MOD_CONTACTS_LIST_FIELD_CONTACT_OPTIONS_LABEL" />
 
-                <field name="show_image" type="radio" default="1" label="MOD_CONTACTS_LIST_SHOW_IMAGE" class="btn-group btn-group-yesno">
+                <field name="show_image" type="radio" default="1" label="MOD_CONTACTS_LIST_FIELD_SHOW_IMAGE_LABEL" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="styles" type="radio" default="0" label="MOD_CONTACTS_LIST_FIELD_STYLE_LABEL" class="btn-group btn-group-yesno">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
