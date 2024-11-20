@@ -1,16 +1,16 @@
 {
     "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
     "name": "mod_contacts_list",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Contacts List Module",
     "license": "GPL-2.0-or-later",
     "assets": [
         {
             "name": "mod_contacts_list.contacts-list",
             "type": "style",
-            "uri": "mod_contacts_list/contacts-list.min.css",
+            "uri": "mod_contacts_list/contacts-list.css",
             "attributes": { "rel": "lazy-stylesheet" },
-            "version": "1.0.1"
+            "version": "1.0.2"
         }
     ]
 }
