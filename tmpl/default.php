@@ -30,10 +30,12 @@ if ((int) $params->get('styles') === 1) {
         <?php
         $contact->slug    = $contact->id . ':' . $contact->alias;
         $contact->link = Route::_(RouteHelper::getContactRoute($contact->slug, $contact->catid));
+
+
         ?>
         <li class="contacts-list-mod__item contact-mod">
             <a class="contact-mod__link" href="<?= $contact->link; ?>" title="<?= $contact->name; ?>">
-                <?php if ((int) $params->get('show_image') === 1): ?>
+                <?php if ((int) $params->get('show_image') === 1 && !empty($contact->image)): ?>
                     <div class="contact-mod__img">
                         <?php echo LayoutHelper::render(
                             'joomla.html.image',
@@ -48,16 +50,16 @@ if ((int) $params->get('styles') === 1) {
                 <div class="contact-mod__body">
                     <h4 class="contact-mod__name"><?= $contact->name; ?></h4>
                     <div class="contact-mod__info">
-                        <?php if ((int) $params->get('show_position') === 1): ?>
+                        <?php if ((int) $params->get('show_position') === 1 && !empty($contact->con_position)): ?>
                             <span class="contact-mod__position"><?= $contact->con_position; ?></span>
                         <?php endif; ?>
-                        <?php if ((int) $params->get('show_email') === 1): ?>
+                        <?php if ((int) $params->get('show_email') === 1 && !empty($contact->email_to)): ?>
                             <span class="contact-mod__email"><?= $contact->email_to; ?></span>
                         <?php endif; ?>
-                        <?php if ((int) $params->get('show_phone') === 1): ?>
+                        <?php if ((int) $params->get('show_phone') === 1 && !empty($contact->telephone)): ?>
                             <span class="contact-mod__phone"><?= $contact->telephone; ?></span>
                         <?php endif; ?>
-                        <?php if ((int) $params->get('show_mobile') === 1): ?>
+                        <?php if ((int) $params->get('show_mobile') === 1 && !empty($contact->mobile)): ?>
                             <span class="contact-mod__mobile"><?= $contact->mobile; ?></span>
                         <?php endif; ?>
                     </div>
