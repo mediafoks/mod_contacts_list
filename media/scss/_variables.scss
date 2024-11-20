@@ -1,0 +1,21 @@
+.contact-mod {
+    --contact-mod-gap: .75rem;
+    --contact-mod-color: currentColor;
+    --contact-mod-bg: hsl(210 7% 96%);
+    --contact-mod-border-radius: .75rem;
+    --contact-mod-padding-x: 1rem;
+    --contact-mod-padding-y: .75rem;
+    --contact-mod-margin-block-end: 1rem;
+    --contact-mod-box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.11),
+        0.8px 1.6px 2px -0.8px hsl(0deg 0% 0% / 0.11),
+        2.1px 4.1px 5.2px -1.7px hsl(0deg 0% 0% / 0.11),
+        5px 10px 12.6px -2.5px hsl(0deg 0% 0% / 0.11);
+    --contact-mod-img-border-width: 1px;
+    --contact-mod-img-border-color: hsl(210 7% 96%);
+    --contact-mod-img-border-radius: .75rem;
+    --contact-mod-img-size: 82px;
+    --contact-mod-title-font-size: 1rem;
+    --contact-mod-title-font-weight: 500;
+    --contact-mod-info-color: hsl(210 7% 58%);
+    --contact-mod-info-font-size: 0.889rem;
+}

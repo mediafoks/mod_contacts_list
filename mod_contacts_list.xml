@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_CONTACTS_LIST</name>
+    <author>Sergey Kuznetsov</author>
+    <creationDate>2024-10</creationDate>
+    <copyright>(C) 2024 Sergey Kuznetsov</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>mediafoks@google.com</authorEmail>
+    <authorUrl>https://github.com/mediafoks</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_CONTACTS_LIST_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Module\ContactsList</namespace>
+    <files>
+        <folder module="mod_contacts_list">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media folder="media" destination="mod_contacts_list">
+        <folder>css</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_contacts_list.ini</language>
+        <language tag="en-GB">language/en-GB/mod_contacts_list.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/mod_contacts_list.ini</language>
+        <language tag="ru-RU">language/ru-RU/mod_contacts_list.sys.ini</language>
+    </languages>
+    <help key="Site_Modules:_Contacts_-_List" />
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic" addfieldprefix="Joomla\Component\Contact\Administrator\Field">
+                <field name="catid" type="category" label="JCATEGORY" extension="com_contact" multiple="true" layout="joomla.form.field.list-fancy-select" filter="intarray" required="true" class="multipleCategories" />
+
+                <field name="count" type="number" label="MOD_CONTACTS_LIST_FIELD_COUNT_LABEL" description="MOD_CONTACTS_LIST_FIELD_COUNT_DESC" default="5" filter="integer" min="0" validate="number" />
+
+                <field name="excluded_contacts" type="subform" label="MOD_CONTACTS_LIST_FIELD_EXCLUDED_CONTACTS_LABEL" multiple="true" buttons="add,remove" showon="ex_or_include_articles:0">
+                    <form>
+                        <field name="id" type="modal_contact" label="COM_CONTACT_SELECT_CONTACT_LABEL" select="true" new="false" edit="false" clear="true" />
+                    </form>
+                </field>
+
+                <field name="contact_ordering" type="list" label="JGLOBAL_SORT_BY" default="name ASC" validate="options">
+                    <option value="">JGLOBAL_SORT_BY</option>
+                    <option value="name ASC">JGLOBAL_NAME_ASC</option>
+                    <option value="name DESC">JGLOBAL_NAME_DESC</option>
+                    <option value="id ASC">JGRID_HEADING_ID_ASC</option>
+                    <option value="id DESC">JGRID_HEADING_ID_DESC</option>
+                    <option value="ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+                    <option value="ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+                    <option value="featured ASC">JFEATURED_ASC</option>
+                    <option value="featured DESC">JFEATURED_DESC</option>
+                    <option value="RAND()">JGLOBAL_RANDOM_ORDER</option>
+                </field>
+
+                <field name="contact_options" type="note" label="MOD_CONTACTS_LIST_CONTACT_OPTIONS" />
+
+                <field name="show_image" type="radio" default="1" label="MOD_CONTACTS_LIST_SHOW_IMAGE" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout" />
+
+                <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" rows="3" validate="CssIdentifier" />
+
+                <field name="owncache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" default="1" filter="integer" validate="options">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="number" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" default="900" filter="integer" />
+            </fieldset>
+
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="KS Contacts List module">https://raw.githubusercontent.com/mediafoks/mod_contacts_list/main/update.xml</server>
+    </updateservers>
+</extension>

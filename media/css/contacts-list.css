@@ -1,0 +1,65 @@
+.contact-mod {
+  --contact-mod-gap: .75rem;
+  --contact-mod-color: currentColor;
+  --contact-mod-bg: hsl(210 7% 96%);
+  --contact-mod-border-radius: .75rem;
+  --contact-mod-padding-x: 1rem;
+  --contact-mod-padding-y: .75rem;
+  --contact-mod-margin-block-end: 1rem;
+  --contact-mod-box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.11),
+      0.8px 1.6px 2px -0.8px hsl(0deg 0% 0% / 0.11),
+      2.1px 4.1px 5.2px -1.7px hsl(0deg 0% 0% / 0.11),
+      5px 10px 12.6px -2.5px hsl(0deg 0% 0% / 0.11);
+  --contact-mod-img-border-width: 1px;
+  --contact-mod-img-border-color: hsl(210 7% 96%);
+  --contact-mod-img-border-radius: .75rem;
+  --contact-mod-img-size: 82px;
+  --contact-mod-title-font-size: 1rem;
+  --contact-mod-title-font-weight: 500;
+  --contact-mod-info-color: hsl(210 7% 58%);
+  --contact-mod-info-font-size: 0.889rem;
+  margin-block-end: var(--contact-mod-margin-block-end);
+}
+
+.contacts-list-mod {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.contact-mod__link {
+  display: grid;
+  gap: var(--contact-mod-gap);
+  color: var(--contact-mod-color);
+  background-color: var(--contact-mod-bg);
+  border-radius: var(--contact-mod-border-radius);
+  padding-inline: var(--contact-mod-padding-x);
+  padding-block: var(--contact-mod-padding-y);
+}
+.contact-mod__link:hover {
+  box-shadow: var(--contact-mod-box-shadow);
+}
+.contact-mod__img {
+  aspect-ratio: 1;
+  border: var(--contact-mod-img-border-width) solid var(--contact-mod-img-border-color);
+  border-radius: var(--contact-mod-img-border-radius);
+  overflow: hidden;
+  max-width: var(--contact-mod-img-size);
+}
+.contact-mod__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+.contact-mod__name {
+  font-size: var(--contact-mod-title-font-size);
+  font-weight: var(--contact-mod-title-font-weight);
+}
+.contact-mod__info {
+  color: var(--contact-mod-info-color);
+  font-size: var(--contact-mod-info-font-size);
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=contacts-list.css.map */

@@ -1,0 +1,8 @@
+.config/*
+node_modules/*
+
+media/css/contacts-list.css.map
+
+package.json
+package-lock.json
+pnpm-lock.yaml
