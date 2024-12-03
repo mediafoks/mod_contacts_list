@@ -21,7 +21,7 @@ use Joomla\Utilities\ArrayHelper;
 /**
  * Helper for mod_contacts_list
  *
- * @since  1.2.2
+ * @since  1.2.3
  */
 class ContactsListHelper implements DatabaseAwareInterface
 {
@@ -46,7 +46,8 @@ class ContactsListHelper implements DatabaseAwareInterface
         $query = $db->getQuery(true)
             ->select('*')
             ->from($db->quoteName('#__contact_details'))
-            ->where('published=1');
+            ->where('published=1')
+            ->where("catid IN (" . $catId . ")");
 
         if (!empty($contactsExcludedList)) {
             $query->where('id NOT IN (' . implode(',', $contactsExcludedList) . ')');
